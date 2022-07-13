@@ -1,0 +1,22 @@
+#mainDiv{
+  display: grid;
+  grid-template-columns: auto auto; 
+  
+} 
+#itemDiv{
+  background-color: aquamarine;
+  border-style: solid;
+  border-color: red;
+  max-width: 200px;
+  max-height: 400px;
+  text-align: center;
+}
+#card{
+  max-height: 400px;
+  max-width: 200px;
+  background-color: teal;
+}
+img{
+  max-height: 400px;
+  max-width: 200px;
+}
