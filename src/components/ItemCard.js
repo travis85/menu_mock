@@ -11,15 +11,20 @@ export default function ItemCard() {
   let [items, setItems] = useState([])
   let [total, setTotal] = useState(0)
 
-  function add(number,item) {
-    setTotal = total += number
-    setItems([...items, item])
-        
-    }
-    function subtract(number) {
-      setTotal = total -= number
-        
-    }
+  function add(number, item) {
+    
+    if (!(items.includes(item))) {
+      setItems([...items, item])
+      setTotal(total += number)
+    } else (
+      alert('Please use quantity buttons')
+    )
+    
+  }
+  // function subtract(number) {
+  //   setTotal = total -= number
+      
+  // }
 
   
 

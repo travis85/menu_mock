@@ -1,30 +1,20 @@
-import { Toast } from 'bootstrap'
-import React, { useState } from 'react'
+import React from 'react'
 import './TotalCard.css'
+import MenuTable from './MenuTable'
 
 
-export default function TotalCard({items , total}) {
+export default function TotalCard({total, items}) {
     
     
-    console.log(items,total )
+    
     return (
         <>
-            
         <div>
-                <ul>
-            {items.map((item) => {
-                return (
-                    <li key={item.id}>
-                        <p>{item.name}</p>
-                        { total}
-                            
-                    </li>
-                )
-            })}
-        </ul>
+            <MenuTable items={total, items}/>
+        </div>
+        <div>
+            <p><strong>Total:</strong> $<span>{total}</span></p>
         </div>
         </>
-        
-        
     )
 }
