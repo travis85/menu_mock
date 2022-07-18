@@ -5,7 +5,7 @@ import ItemCard from './components/ItemCard.js';
 function App() {
   return (
     <div className="App">
-      <ItemCard/>
+      <ItemCard />
     </div>
   );
 

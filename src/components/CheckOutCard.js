@@ -8,10 +8,13 @@ import Modal from 'react-bootstrap/Modal';
  * @param {total} 
  * @returns 
  */
-function CheckOutCard({total}) {
+function CheckOutCard({total, clearItemsFunction}) {
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  function handleClose() {
+    setShow(false)
+    clearItemsFunction()
+  }
   const handleShow = () => setShow(true);
 
   return (
@@ -26,7 +29,7 @@ function CheckOutCard({total}) {
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header closeButton>
+      <Modal.Header closeButton>
           <Modal.Title>Trav's Taco Truck</Modal.Title>
         </Modal.Header>
         <Modal.Body>
