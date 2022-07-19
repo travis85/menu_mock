@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
 
 /**
  * child of TotalCard.js to handle checkout 
@@ -28,13 +29,25 @@ function CheckOutCard({total, clearItemsFunction}) {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
-      >
-      <Modal.Header closeButton>
-          <Modal.Title>Trav's Taco Truck</Modal.Title>
+        >
+        <Modal.Header closeButton>
+            <Modal.Title>Your Total is { total }</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          Thank you for your purchase your total is ${total}
-        </Modal.Body>
+        <Form style={{padding:"2px"}}>
+          <Form.Group className="mb-3">
+            <Form.Label>Name</Form.Label>
+            <Form.Control type="text" placeholder="Enter Name" />
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Credit Card#</Form.Label>
+            <Form.Control type="text" placeholder="Credit Card" />
+          </Form.Group>
+          <Form.Group className="mb-3" >
+            <Form.Check type="checkbox" label="Visa" />
+            <Form.Check type="checkbox" label="Master Card" />
+          </Form.Group>
+        </Form>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>Purchase</Button>
         </Modal.Footer>
