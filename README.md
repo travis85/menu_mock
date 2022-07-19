@@ -11,8 +11,8 @@ Provided is a sample JSON response of food items. Using this JSON, build a mock 
 
 React 
 Bootstrap
-Vanilla JS
-Vanilla CSS
+Javascript
+CSS
 
 ## Available Scripts
 
