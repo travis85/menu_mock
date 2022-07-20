@@ -1,11 +1,11 @@
 # Project Specifications
+
 Provided is a sample JSON response of food items. Using this JSON, build a mock online ordering system for a taco truck restaurant, including: 
   - show menu items
   - select items
   - add to cart
   - show total
   - checkout 
-
 
 # Technical Specs
 
