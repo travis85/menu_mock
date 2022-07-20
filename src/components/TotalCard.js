@@ -9,20 +9,22 @@ import CheckOutCard from './CheckOutCard'
  * @param {total , items, }
  * @returns 
  */
-export default function TotalCard({ total, items, clearItemsFunction}) {
+export default function TotalCard({ total, items, clearItemsFunction, handleDelete}) {
 
     return (
         <>
-        <div>
-            <MenuTable items={total, items}/>
+        <div id='tableDiv'>
+                <MenuTable items={ items}
+                    handleDelete = { handleDelete }
+                />
         </div>
         <div>
-            <p><strong>Total:</strong> <span>{currencyFormatter.format(total)}</span></p>
+            <p><strong>Total:</strong> <span>{currencyFormatter.format(total)}</span>
                 <CheckOutCard
                     total={total}
                     clearItemsFunction={clearItemsFunction}
-
                 />
+            </p>
         </div>
         </>
     )

@@ -1,21 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Table from 'react-bootstrap/Table';
+import './TotalCard.css'
 
-function MenuTable({ items }) {
-
+function MenuTable({ items, handleDelete }) {
+  console.log(items)
   return (
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>Item</th>
+          <th style={{color: 'green'}}>Your Order</th>
         </tr>
       </thead>
       <tbody>
         {items.map((item) => {
           return (
-            <tr>
-              <td>{item}</td>
+            <tr key={item.id}>
+              <td>{item.item} <button onClick={() =>handleDelete(item, item.price)} id='itemButton'>x</button></td>
             </tr>
+            
           )
         })}
       </tbody>
