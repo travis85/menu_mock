@@ -3,15 +3,15 @@ import Table from 'react-bootstrap/Table';
 import './TotalCard.css'
 
 function MenuTable({ items, handleDelete }) {
-  console.log(items)
+  
   return (
-    <Table striped bordered hover>
+    <Table striped bordered hover >
       <thead>
         <tr>
           <th style={{color: 'green'}}>Your Order</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id='table'>
         {items.map((item) => {
           return (
             <tr key={item.id}>

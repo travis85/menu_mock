@@ -1,8 +1,9 @@
 #tableDiv{
     background-color: white;
-    
+    max-height: 500px;
+    overflow: scroll;
+    margin-bottom: 8px;
 }
-
 span{
     color: green;
 }
