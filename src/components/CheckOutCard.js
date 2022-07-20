@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
+import './checkOutCard.css'
 
 /**
  * child of TotalCard.js to handle checkout 
@@ -20,7 +21,7 @@ function CheckOutCard({total, clearItemsFunction}) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow} id='checkOutButton'>
         Check Out
       </Button>
 
@@ -29,8 +30,9 @@ function CheckOutCard({total, clearItemsFunction}) {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
+        id='model'
         >
-        <Modal.Header closeButton>
+        <Modal.Header >
             <Modal.Title>Your Total is { total }</Modal.Title>
         </Modal.Header>
         <Form style={{padding:"2px"}}>
