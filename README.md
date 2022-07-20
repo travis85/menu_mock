@@ -1,4 +1,10 @@
-# Project Specifications
+# Taco Truck Assessment
+
+# Project Description
+
+Menu of a taco resturant that performs the following:
+
+## Project Specifications
 
 Provided is a sample JSON response of food items. Using this JSON, build a mock online ordering system for a taco truck restaurant, including: 
   - show menu items
